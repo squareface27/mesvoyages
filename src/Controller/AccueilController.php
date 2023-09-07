@@ -13,7 +13,7 @@ class AccueilController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('pages/voyages/accueil.html.twig', [
+        return $this->render('pages/accueil/accueil.html.twig', [
             'controller_name' => 'Hello World !',
         ]);
     }
