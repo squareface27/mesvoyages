@@ -332,6 +332,13 @@
         <argument type="service" id=".service_locator.GNc8e5B.App\Controller\AccueilController"/>
       </call>
     </service>
+    <service id="App\Controller\BasefrontController" class="App\Controller\BasefrontController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.GNc8e5B.App\Controller\BasefrontController"/>
+      </call>
+    </service>
     <service id="App\Controller\VoyagesController" class="App\Controller\VoyagesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -5990,6 +5997,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BasefrontController" class="App\Controller\BasefrontController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BasefrontController" class="App\Controller\BasefrontController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\BasefrontController" class="App\Controller\BasefrontController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\VoyagesController" class="App\Controller\VoyagesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\VoyagesController" class="App\Controller\VoyagesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\VoyagesController" class="App\Controller\VoyagesController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6746,6 +6756,12 @@
     <service id=".service_locator.GNc8e5B.App\Controller\AccueilController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\AccueilController"/>
       <argument>App\Controller\AccueilController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.GNc8e5B" method="withContext"/>
+    </service>
+    <service id=".service_locator.GNc8e5B.App\Controller\BasefrontController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\BasefrontController"/>
+      <argument>App\Controller\BasefrontController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.GNc8e5B" method="withContext"/>
     </service>

@@ -33,7 +33,7 @@ class __TwigTemplate_a19eacf7898fc2c08bf9c17003df069023843ace0f03178e89615df7a33
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "basefront.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_a19eacf7898fc2c08bf9c17003df069023843ace0f03178e89615df7a33
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "pages/accueil/accueil.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "pages/accueil/accueil.html.twig", 1);
+        $this->parent = $this->loadTemplate("basefront.html.twig", "pages/accueil/accueil.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -85,11 +85,7 @@ class __TwigTemplate_a19eacf7898fc2c08bf9c17003df069023843ace0f03178e89615df7a33
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<h1>page d'accueil</h1>
-<a href=\"";
-        // line 7
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages");
-        echo "\">Voyages</a>
+        echo "<h1>Page d'accueil</h1>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -111,18 +107,17 @@ class __TwigTemplate_a19eacf7898fc2c08bf9c17003df069023843ace0f03178e89615df7a33
 
     public function getDebugInfo()
     {
-        return array (  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'basefront.html.twig' %}
 
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<h1>page d'accueil</h1>
-<a href=\"{{ path('voyages') }}\">Voyages</a>
+<h1>Page d'accueil</h1>
 {% endblock %}
 ", "pages/accueil/accueil.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\pages\\accueil\\accueil.html.twig");
     }
