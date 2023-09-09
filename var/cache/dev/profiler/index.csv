@@ -90,3 +90,9 @@ f06431,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/tri/datecrea
 9047aa,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/ville,1694270933,,200
 300c3d,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/ville,1694270938,,200
 da2da2,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/ville,1694270944,,200
+80c3a0,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/tri/pays/DESC,1694271127,,200
+8c23d2,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/tri/pays/ASC,1694271128,,200
+f77e30,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/tri/pays/ASC,1694271152,,200
+5e4c56,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/pays,1694271155,,200
+6fb849,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/pays,1694271159,,200
+357d32,::1,POST,http://localhost/mesvoyages/public/index.php/voyages/recherche/pays,1694271161,,200

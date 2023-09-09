@@ -100,32 +100,33 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
                 </form>
                 </th>
                 <th class=\"text-left align-top\" scope=\"col\">Pays
-                <a href=\"";
+                <form class=\"form-inline mt-1\" method=\"POST\" action=\"";
         // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "pays", "ordre" => "ASC"]), "html", null, true);
-        echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\"><</a>
-                <a href=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "pays", "ordre" => "DESC"]), "html", null, true);
-        echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">></a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.findallequal", ["champ" => "pays"]);
+        echo "\">
+                    <div class=\"form-group mr-1 mb-2\">
+                        <input type=\"text\" class=\"sm\" name=\"recherche\">
+                        <button type=\"submit\" class=\"btn btn-primary mb-2 btn-sm\">filtrer</button>
+                    </div>
+                </form>
                 </th>
                 <th class=\"text-end align-top\" scope=\"col\">Note
                 <a href=\"";
-        // line 22
+        // line 26
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "note", "ordre" => "ASC"]), "html", null, true);
         echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\"><</a>
                 <a href=\"";
-        // line 23
+        // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "note", "ordre" => "DESC"]), "html", null, true);
         echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">></a>
                 </th>
                 <th class=\"text-center align-top\" scope=\"col\">Date
                 <a href=\"";
-        // line 26
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "datecreation", "ordre" => "ASC"]), "html", null, true);
         echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\"><</a>
                 <a href=\"";
-        // line 27
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.sort", ["champ" => "datecreation", "ordre" => "DESC"]), "html", null, true);
         echo "\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">></a>
                 </th>
@@ -133,56 +134,56 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
         </thread>
         <tbody>
             ";
-        // line 32
+        // line 36
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["visites"]) || array_key_exists("visites", $context) ? $context["visites"] : (function () { throw new RuntimeError('Variable "visites" does not exist.', 32, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["visites"]) || array_key_exists("visites", $context) ? $context["visites"] : (function () { throw new RuntimeError('Variable "visites" does not exist.', 36, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["visite"]) {
-            // line 33
+            // line 37
             echo "                <tr>
                     <td>
                         <h5 class=\"text-primary\">
                         <a href=\"#\">";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 36), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 40), "html", null, true);
             echo "</a>
                         </h5>
                     </td>
                     <td>
                         ";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "pays", [], "any", false, false, false, 40), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "pays", [], "any", false, false, false, 44), "html", null, true);
             echo "
                     </td>
                     <td class=\"text-end\">
                         <strong>
                             ";
-            // line 44
-            if ((twig_get_attribute($this->env, $this->source, $context["visite"], "note", [], "any", false, false, false, 44) < 10)) {
-                // line 45
-                echo "                                <div class=\"text-danger\">
-                                    ";
-                // line 46
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "note", [], "any", false, false, false, 46), "html", null, true);
-                echo "/20
-                                </div>
-                            ";
-            } else {
+            // line 48
+            if ((twig_get_attribute($this->env, $this->source, $context["visite"], "note", [], "any", false, false, false, 48) < 10)) {
                 // line 49
-                echo "                                <div class=\"text-success\">
+                echo "                                <div class=\"text-danger\">
                                     ";
                 // line 50
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "note", [], "any", false, false, false, 50), "html", null, true);
                 echo "/20
                                 </div>
                             ";
+            } else {
+                // line 53
+                echo "                                <div class=\"text-success\">
+                                    ";
+                // line 54
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "note", [], "any", false, false, false, 54), "html", null, true);
+                echo "/20
+                                </div>
+                            ";
             }
-            // line 53
+            // line 57
             echo "                        </strong>
                     </td>
                     <td class=\"text-center\">
                         ";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "datecreationstring", [], "any", false, false, false, 56), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "datecreationstring", [], "any", false, false, false, 60), "html", null, true);
             echo "
                     </td>
                 </tr>
@@ -191,7 +192,7 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['visite'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 60
+        // line 64
         echo "        </tbody>
     </table>            
 ";
@@ -215,7 +216,7 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
 
     public function getDebugInfo()
     {
-        return array (  195 => 60,  185 => 56,  180 => 53,  174 => 50,  171 => 49,  165 => 46,  162 => 45,  160 => 44,  153 => 40,  146 => 36,  141 => 33,  137 => 32,  129 => 27,  125 => 26,  119 => 23,  115 => 22,  109 => 19,  105 => 18,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  196 => 64,  186 => 60,  181 => 57,  175 => 54,  172 => 53,  166 => 50,  163 => 49,  161 => 48,  154 => 44,  147 => 40,  142 => 37,  138 => 36,  130 => 31,  126 => 30,  120 => 27,  116 => 26,  105 => 18,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -237,8 +238,12 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
                 </form>
                 </th>
                 <th class=\"text-left align-top\" scope=\"col\">Pays
-                <a href=\"{{ path('voyages.sort', {champ:'pays', ordre:'ASC'}) }}\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\"><</a>
-                <a href=\"{{ path('voyages.sort', {champ:'pays', ordre:'DESC'}) }}\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">></a>
+                <form class=\"form-inline mt-1\" method=\"POST\" action=\"{{ path('voyages.findallequal', {champ:'pays'}) }}\">
+                    <div class=\"form-group mr-1 mb-2\">
+                        <input type=\"text\" class=\"sm\" name=\"recherche\">
+                        <button type=\"submit\" class=\"btn btn-primary mb-2 btn-sm\">filtrer</button>
+                    </div>
+                </form>
                 </th>
                 <th class=\"text-end align-top\" scope=\"col\">Note
                 <a href=\"{{ path('voyages.sort', {champ:'note', ordre:'ASC'}) }}\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\"><</a>
