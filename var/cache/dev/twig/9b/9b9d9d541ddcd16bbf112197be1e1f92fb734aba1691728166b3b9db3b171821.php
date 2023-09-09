@@ -142,8 +142,10 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
             echo "                <tr>
                     <td>
                         <h5 class=\"text-primary\">
-                        <a href=\"#\">";
+                        <a href=\"";
             // line 40
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages.showone", ["id" => twig_get_attribute($this->env, $this->source, $context["visite"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 40), "html", null, true);
             echo "</a>
                         </h5>
@@ -216,7 +218,7 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
 
     public function getDebugInfo()
     {
-        return array (  196 => 64,  186 => 60,  181 => 57,  175 => 54,  172 => 53,  166 => 50,  163 => 49,  161 => 48,  154 => 44,  147 => 40,  142 => 37,  138 => 36,  130 => 31,  126 => 30,  120 => 27,  116 => 26,  105 => 18,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  198 => 64,  188 => 60,  183 => 57,  177 => 54,  174 => 53,  168 => 50,  165 => 49,  163 => 48,  156 => 44,  147 => 40,  142 => 37,  138 => 36,  130 => 31,  126 => 30,  120 => 27,  116 => 26,  105 => 18,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -260,7 +262,7 @@ class __TwigTemplate_eb13069735cbd8ca4f58a47644b7c03c55804804f628a7e52589c9a17c6
                 <tr>
                     <td>
                         <h5 class=\"text-primary\">
-                        <a href=\"#\">{{ visite.ville }}</a>
+                        <a href=\"{{ path('voyages.showone', {id:visite.id}) }}\">{{ visite.ville}}</a>
                         </h5>
                     </td>
                     <td>
