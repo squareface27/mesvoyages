@@ -7,6 +7,7 @@ return [
     'app_basefront' => [[], ['_controller' => 'App\\Controller\\BasefrontController::index'], [], [['text', '/basefront']], [], [], []],
     'voyages' => [[], ['_controller' => 'App\\Controller\\VoyagesController::index'], [], [['text', '/voyages']], [], [], []],
     'voyages.sort' => [['champ', 'ordre'], ['_controller' => 'App\\Controller\\VoyagesController::sort'], [], [['variable', '/', '[^/]++', 'ordre', true], ['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/tri']], [], [], []],
+    'voyages.findallequal' => [['champ'], ['_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], [], [['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/recherche']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     '_wdt' => [['token'], ['_controller' => 'web_profiler.controller.profiler::toolbarAction'], [], [['variable', '/', '[^/]++', 'token', true], ['text', '/_wdt']], [], [], []],
     '_profiler_home' => [[], ['_controller' => 'web_profiler.controller.profiler::homeAction'], [], [['text', '/_profiler/']], [], [], []],
