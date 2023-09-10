@@ -118,24 +118,23 @@ class __TwigTemplate_ba0181ce23d356bb8562cd9d4b32b1365a1dbdf9133145dc4ef618cca93
         // line 19
         echo "        </div>
         <div class=\"col\">
-        <!-- Emplacement photo -->
         <!-- emplacement photo -->   
             <div>
                 ";
-        // line 24
-        if (twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 24, $this->source); })()), "imagename", [], "any", false, false, false, 24)) {
-            // line 25
+        // line 23
+        if (twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 23, $this->source); })()), "imagename", [], "any", false, false, false, 23)) {
+            // line 24
             echo "                    <img src=\"";
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "request", [], "any", false, false, false, 25), "getBasePath", [], "method", false, false, false, 25) . $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset((isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 25, $this->source); })()), "imageFile")), "html", null, true);
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "request", [], "any", false, false, false, 24), "getBasePath", [], "method", false, false, false, 24) . $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset((isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 24, $this->source); })()), "imageFile")), "html", null, true);
             echo "\"
                          class=\"card-img-top\" style=\"width:100%;height:auto;\">
                 ";
         } else {
-            // line 28
+            // line 27
             echo "                    <p>(aucune image)</p>
                 ";
         }
-        // line 29
+        // line 28
         echo "            
             </div  
     </div>
@@ -144,8 +143,8 @@ class __TwigTemplate_ba0181ce23d356bb8562cd9d4b32b1365a1dbdf9133145dc4ef618cca93
             <p><strong>mon avis : </strong></p>
             <p>
             ";
-        // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 36, $this->source); })()), "avis", [], "any", false, false, false, 36), "html", null, true);
+        // line 35
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 35, $this->source); })()), "avis", [], "any", false, false, false, 35), "html", null, true);
         echo "
             </p>
         </div>
@@ -171,7 +170,7 @@ class __TwigTemplate_ba0181ce23d356bb8562cd9d4b32b1365a1dbdf9133145dc4ef618cca93
 
     public function getDebugInfo()
     {
-        return array (  148 => 36,  139 => 29,  135 => 28,  128 => 25,  126 => 24,  119 => 19,  110 => 17,  106 => 16,  98 => 14,  92 => 12,  86 => 10,  84 => 9,  80 => 8,  76 => 7,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  147 => 35,  138 => 28,  134 => 27,  127 => 24,  125 => 23,  119 => 19,  110 => 17,  106 => 16,  98 => 14,  92 => 12,  86 => 10,  84 => 9,  80 => 8,  76 => 7,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -196,7 +195,6 @@ class __TwigTemplate_ba0181ce23d356bb8562cd9d4b32b1365a1dbdf9133145dc4ef618cca93
             {% endfor %}
         </div>
         <div class=\"col\">
-        <!-- Emplacement photo -->
         <!-- emplacement photo -->   
             <div>
                 {% if visite.imagename %}
