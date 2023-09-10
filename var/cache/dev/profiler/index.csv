@@ -225,3 +225,7 @@ f8f341,::1,GET,http://localhost/mesvoyages/public/index.php/,1694374308,,200
 684cf6,::1,POST,http://localhost/mesvoyages/public/index.php/contact,1694374337,,302
 8e3039,::1,GET,http://localhost/mesvoyages/public/index.php/contact,1694374337,,200
 c27ce8,::1,GET,http://localhost/mesvoyages/public/index.php/,1694374382,,200
+70dbb1,::1,GET,http://localhost/mesvoyages/public/index.php/,1694375148,,200
+0ddd14,::1,GET,http://localhost/mesvoyages/public/index.php/,1694375149,,200
+d538ce,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694375150,,200
+27d37c,::1,GET,http://localhost/mesvoyages/public/index.php/admin/ajout,1694375151,,200
