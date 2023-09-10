@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* admin/admin.voyage.edit.html.twig */
-class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f55994a3e5 extends Template
+/* admin/admin.voyage.ajout.html.twig */
+class __TwigTemplate_a8315f25a8a80e0e0035a0c01b37abb5c5d7ecf9674a0295f1d54dc49a412111 extends Template
 {
     private $source;
     private $macros = [];
@@ -39,12 +39,12 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/admin.voyage.edit.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/admin.voyage.ajout.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/admin.voyage.edit.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/admin.voyage.ajout.html.twig"));
 
-        $this->parent = $this->loadTemplate("baseadmin.html.twig", "admin/admin.voyage.edit.html.twig", 1);
+        $this->parent = $this->loadTemplate("baseadmin.html.twig", "admin/admin.voyage.ajout.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -65,7 +65,7 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h2>Détail visite : </h2>
+        echo "    <h2>Nouvelle visite : </h2>
     ";
         // line 5
         echo twig_include($this->env, $context, "_admin.voyage.form.html.twig");
@@ -81,7 +81,7 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
 
     public function getTemplateName()
     {
-        return "admin/admin.voyage.edit.html.twig";
+        return "admin/admin.voyage.ajout.html.twig";
     }
 
     public function isTraitable()
@@ -99,8 +99,8 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
         return new Source("{% extends \"baseadmin.html.twig\" %}
 
 {% block body %}
-    <h2>Détail visite : </h2>
+    <h2>Nouvelle visite : </h2>
     {{  include ('_admin.voyage.form.html.twig') }}
-{% endblock %}", "admin/admin.voyage.edit.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\admin\\admin.voyage.edit.html.twig");
+{% endblock %}", "admin/admin.voyage.ajout.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\admin\\admin.voyage.ajout.html.twig");
     }
 }

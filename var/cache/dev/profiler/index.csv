@@ -113,3 +113,15 @@ d0b68e,::1,GET,http://localhost/mesvoyages/public/index.php/admin/edit/31,169435
 804cbe,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694355478,,200
 7f2185,::1,GET,http://localhost/mesvoyages/public/index.php/,1694355486,,200
 c386c3,::1,GET,http://localhost/mesvoyages/public/index.php/voyages,1694355487,,200
+c7c00b,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694355811,,200
+70c4a5,::1,GET,http://localhost/mesvoyages/public/index.php/admin/edit/12,1694355813,e45ad5,500
+e45ad5,::1,GET,http://localhost/mesvoyages/public/index.php/admin/edit/12,1694355813,,500
+49b2a9,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694355846,,200
+26adab,::1,GET,http://localhost/mesvoyages/public/index.php/admin/edit/37,1694355848,,200
+f10093,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694356325,,200
+fa33c7,::1,GET,http://localhost/mesvoyages/public/index.php/admin/ajout,1694356331,b97f12,500
+b97f12,::1,GET,http://localhost/mesvoyages/public/index.php/admin/ajout,1694356331,,500
+05b3b0,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694356466,,200
+5137bd,::1,GET,http://localhost/mesvoyages/public/index.php/admin/ajout,1694356468,,200
+8cdb2c,::1,POST,http://localhost/mesvoyages/public/index.php/admin/ajout,1694356503,,302
+ffba04,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694356503,,200
