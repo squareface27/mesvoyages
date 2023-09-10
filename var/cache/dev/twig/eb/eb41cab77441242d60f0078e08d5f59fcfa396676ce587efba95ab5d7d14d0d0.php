@@ -68,7 +68,6 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -87,7 +86,6 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -108,10 +106,27 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
 
         // line 7
         echo "    <div class=\"container\">
-        <!-- titre -->
         <div class=\"text-center\">
             <h1>Gestion des voyages</h1>
-        </div>
+        </div>       
+        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+              <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+                <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyages");
+        echo "\">Voyages</a>
+                </li>
+                <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.environnements");
+        echo "\">Environnements</a>
+                </li>                
+              </ul>
+            </div>
+        </nav>   
     </div>
 ";
         
@@ -122,7 +137,7 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
 
     }
 
-    // line 15
+    // line 26
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -132,7 +147,6 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -141,7 +155,7 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
 
     }
 
-    // line 16
+    // line 27
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -151,7 +165,6 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        echo " ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -172,27 +185,38 @@ class __TwigTemplate_effb7c2164952c79983475d6aad8b609bb8d1e78034b7cf1e4e57d8b3ae
 
     public function getDebugInfo()
     {
-        return array (  145 => 16,  126 => 15,  110 => 7,  100 => 6,  81 => 4,  62 => 3,  39 => 1,);
+        return array (  159 => 27,  141 => 26,  124 => 18,  118 => 15,  108 => 7,  98 => 6,  80 => 4,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends \"base.html.twig\" %}
 
-{% block title %} {% endblock %}
-{% block stylesheets %} {% endblock %}
+{% block title %}{% endblock %}
+{% block stylesheets %}{% endblock %}
 
 {% block top %}
     <div class=\"container\">
-        <!-- titre -->
         <div class=\"text-center\">
             <h1>Gestion des voyages</h1>
-        </div>
+        </div>       
+        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+              <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+                <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('admin.voyages') }}\">Voyages</a>
+                </li>
+                <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"{{ path('admin.environnements') }}\">Environnements</a>
+                </li>                
+              </ul>
+            </div>
+        </nav>   
     </div>
 {% endblock %}
 
-{% block body %} {% endblock %}
-{% block javascripts %} {% endblock %}
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
 ", "baseadmin.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\baseadmin.html.twig");
     }
 }

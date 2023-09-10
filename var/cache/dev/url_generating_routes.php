@@ -4,6 +4,9 @@
 
 return [
     'accueil.index' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
+    'admin.environnements' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::index'], [], [['text', '/admin/environnements']], [], [], []],
+    'admin.environnement.suppr' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::suppr'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/environnement/suppr']], [], [], []],
+    'admin.environnement.ajout' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::ajout'], [], [['text', '/admin/environnement/ajout']], [], [], []],
     'admin.voyages' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::index'], [], [['text', '/admin']], [], [], []],
     'admin.voyage.suppr' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::suppr'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/suppr']], [], [], []],
     'admin.voyage.edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/edit']], [], [], []],

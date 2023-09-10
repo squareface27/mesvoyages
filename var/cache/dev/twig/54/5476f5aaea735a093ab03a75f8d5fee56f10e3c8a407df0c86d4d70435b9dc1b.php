@@ -65,9 +65,11 @@ class __TwigTemplate_b6ee0ade934683d923263eb450d795d9b4d25f69d649dc4d4c6507fad59
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h2>";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 4, $this->source); })()), "ville", [], "any", false, false, false, 4), "html", null, true);
-        echo "</h2>
+        echo "    <h2>Détail visite : </h2>
+    ";
+        // line 5
+        echo twig_include($this->env, $context, "_admin.voyage.form.html.twig");
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -89,7 +91,7 @@ class __TwigTemplate_b6ee0ade934683d923263eb450d795d9b4d25f69d649dc4d4c6507fad59
 
     public function getDebugInfo()
     {
-        return array (  68 => 4,  58 => 3,  35 => 1,);
+        return array (  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -97,7 +99,8 @@ class __TwigTemplate_b6ee0ade934683d923263eb450d795d9b4d25f69d649dc4d4c6507fad59
         return new Source("{% extends \"baseadmin.html.twig\" %}
 
 {% block body %}
-    <h2>{{ visite.ville}}</h2>
+    <h2>Détail visite : </h2>
+    {{  include ('_admin.voyage.form.html.twig') }}
 {% endblock %}", "admin/admin.voyage.edit.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\admin\\admin.voyage.edit.html.twig");
     }
 }

@@ -86,6 +86,8 @@ return [[
 '[C]App%5CController%5CVoyagesController%24repository' => 1,
 'App%5CEntity%5CVisite' => 8,
 '[C]App%5CEntity%5CVisite' => 1,
+'App%5CEntity%5CVisite%23__construct' => 0,
+'[C]App%5CEntity%5CVisite%23__construct' => 1,
 'App%5CEntity%5CVisite%23getId' => 0,
 '[C]App%5CEntity%5CVisite%23getId' => 1,
 'App%5CEntity%5CVisite%23getVille' => 0,
@@ -118,6 +120,12 @@ return [[
 '[C]App%5CEntity%5CVisite%23getTempmax' => 1,
 'App%5CEntity%5CVisite%23setTempmax' => 0,
 '[C]App%5CEntity%5CVisite%23setTempmax' => 1,
+'App%5CEntity%5CVisite%23getEnvironnements' => 0,
+'[C]App%5CEntity%5CVisite%23getEnvironnements' => 1,
+'App%5CEntity%5CVisite%23addEnvironnement' => 0,
+'[C]App%5CEntity%5CVisite%23addEnvironnement' => 1,
+'App%5CEntity%5CVisite%23removeEnvironnement' => 0,
+'[C]App%5CEntity%5CVisite%23removeEnvironnement' => 1,
 'App%5CEntity%5CVisite%24id' => 9,
 '[C]App%5CEntity%5CVisite%24id' => 1,
 'App%5CEntity%5CVisite%24ville' => 10,
@@ -134,6 +142,8 @@ return [[
 '[C]App%5CEntity%5CVisite%24tempmin' => 1,
 'App%5CEntity%5CVisite%24tempmax' => 12,
 '[C]App%5CEntity%5CVisite%24tempmax' => 1,
+'App%5CEntity%5CVisite%24environnements' => 14,
+'[C]App%5CEntity%5CVisite%24environnements' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -682,7 +692,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1694290082,
+1 => 1694358879,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -966,6 +976,25 @@ return [[
                 ],
                 'nullable' => [
                     true,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+14 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToMany')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'targetEntity' => [
+                    'App\\Entity\\Environnement',
                 ],
             ],
         ],

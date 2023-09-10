@@ -66,6 +66,15 @@ class __TwigTemplate_a6ab5ffd83cf8054c42dcb562dea09a7928cafe611bc3319d8abe1f9733
 
         // line 4
         echo "
+    <p class=\"text-end\">
+        <a href=\"";
+        // line 6
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyage.ajout");
+        echo "\" class=\"btn btn-primary\">
+            Ajouter une nouvelle visite
+        </a>
+    </p>  
+
     <table class=\"table table-striped\">
         <thead>
             <tr>
@@ -85,42 +94,42 @@ class __TwigTemplate_a6ab5ffd83cf8054c42dcb562dea09a7928cafe611bc3319d8abe1f9733
         </thead>
         <tbody>
             ";
-        // line 23
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["visites"]) || array_key_exists("visites", $context) ? $context["visites"] : (function () { throw new RuntimeError('Variable "visites" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["visites"]) || array_key_exists("visites", $context) ? $context["visites"] : (function () { throw new RuntimeError('Variable "visites" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["visite"]) {
-            // line 24
+            // line 30
             echo "                <tr>
                     <td>
                         <h5 class=\"text-primary\">
                             ";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 27), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 33), "html", null, true);
             echo "
                         </h5>
                     </td>
                     <td>
                         ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "pays", [], "any", false, false, false, 31), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "pays", [], "any", false, false, false, 37), "html", null, true);
             echo "
                     </td>
                     <td>
                         ";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "datecreationstring", [], "any", false, false, false, 34), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "datecreationstring", [], "any", false, false, false, 40), "html", null, true);
             echo "
                     </td>
                     <td>
                         <a href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyage.edit", ["id" => twig_get_attribute($this->env, $this->source, $context["visite"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyage.edit", ["id" => twig_get_attribute($this->env, $this->source, $context["visite"], "id", [], "any", false, false, false, 43)]), "html", null, true);
             echo "\" class=\"btn btn-secondary\">Editer</a>
                         <a href=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyage.suppr", ["id" => twig_get_attribute($this->env, $this->source, $context["visite"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyage.suppr", ["id" => twig_get_attribute($this->env, $this->source, $context["visite"], "id", [], "any", false, false, false, 44)]), "html", null, true);
             echo "\" class=\"btn btn-danger\" onclick=\"return confirm('Etes-vous sûr de vouloir supprimer ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 38), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["visite"], "ville", [], "any", false, false, false, 44), "html", null, true);
             echo " ?')\">Supprimer</a>
                     </td>
                 </tr>
@@ -129,7 +138,7 @@ class __TwigTemplate_a6ab5ffd83cf8054c42dcb562dea09a7928cafe611bc3319d8abe1f9733
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['visite'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 48
         echo "        </tbody>
     </table>
 
@@ -155,7 +164,7 @@ class __TwigTemplate_a6ab5ffd83cf8054c42dcb562dea09a7928cafe611bc3319d8abe1f9733
 
     public function getDebugInfo()
     {
-        return array (  133 => 42,  121 => 38,  117 => 37,  111 => 34,  105 => 31,  98 => 27,  93 => 24,  89 => 23,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  142 => 48,  130 => 44,  126 => 43,  120 => 40,  114 => 37,  107 => 33,  102 => 30,  98 => 29,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -163,6 +172,12 @@ class __TwigTemplate_a6ab5ffd83cf8054c42dcb562dea09a7928cafe611bc3319d8abe1f9733
         return new Source("{% extends \"baseadmin.html.twig\" %}
 
 {% block body %}
+
+    <p class=\"text-end\">
+        <a href=\"{{ path('admin.voyage.ajout') }}\" class=\"btn btn-primary\">
+            Ajouter une nouvelle visite
+        </a>
+    </p>  
 
     <table class=\"table table-striped\">
         <thead>

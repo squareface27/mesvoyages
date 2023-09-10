@@ -338,6 +338,14 @@
         <argument type="service" id=".service_locator.GNc8e5B.App\Controller\AccueilController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\AdminEnvironnementController" class="App\Controller\Admin\AdminEnvironnementController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\EnvironnementRepository"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.GNc8e5B.App\Controller\Admin\AdminEnvironnementController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\AdminVoyagesController" class="App\Controller\Admin\AdminVoyagesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6064,6 +6072,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AccueilController" class="App\Controller\AccueilController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminEnvironnementController" class="App\Controller\Admin\AdminEnvironnementController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminEnvironnementController" class="App\Controller\Admin\AdminEnvironnementController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\AdminEnvironnementController" class="App\Controller\Admin\AdminEnvironnementController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\AdminVoyagesController" class="App\Controller\Admin\AdminVoyagesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\AdminVoyagesController" class="App\Controller\Admin\AdminVoyagesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\AdminVoyagesController" class="App\Controller\Admin\AdminVoyagesController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6840,6 +6851,12 @@
     <service id=".service_locator.GNc8e5B.App\Controller\AccueilController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\AccueilController"/>
       <argument>App\Controller\AccueilController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.GNc8e5B" method="withContext"/>
+    </service>
+    <service id=".service_locator.GNc8e5B.App\Controller\Admin\AdminEnvironnementController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\AdminEnvironnementController"/>
+      <argument>App\Controller\Admin\AdminEnvironnementController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.GNc8e5B" method="withContext"/>
     </service>

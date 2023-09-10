@@ -9,6 +9,8 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/' => [[['_route' => 'accueil.index', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
+        '/admin/environnements' => [[['_route' => 'admin.environnements', '_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::index'], null, null, null, false, false, null]],
+        '/admin/environnement/ajout' => [[['_route' => 'admin.environnement.ajout', '_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::ajout'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin.voyages', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::index'], null, null, null, false, false, null]],
         '/admin/ajout' => [[['_route' => 'admin.voyage.ajout', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::ajout'], null, null, null, false, false, null]],
         '/basefront' => [[['_route' => 'app_basefront', '_controller' => 'App\\Controller\\BasefrontController::index'], null, null, null, false, false, null]],
@@ -22,44 +24,48 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/admin/(?'
-                    .'|suppr/([^/]++)(*:31)'
-                    .'|edit/([^/]++)(*:51)'
+                    .'|e(?'
+                        .'|nvironnement/suppr/([^/]++)(*:48)'
+                        .'|dit/([^/]++)(*:67)'
+                    .')'
+                    .'|suppr/([^/]++)(*:89)'
                 .')'
                 .'|/voyages/(?'
-                    .'|tri/([^/]++)/([^/]++)(*:92)'
-                    .'|recherche/([^/]++)(*:117)'
-                    .'|voyage/([^/]++)(*:140)'
+                    .'|tri/([^/]++)/([^/]++)(*:130)'
+                    .'|recherche/([^/]++)(*:156)'
+                    .'|voyage/([^/]++)(*:179)'
                 .')'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:180)'
-                    .'|wdt/([^/]++)(*:200)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:219)'
+                    .'|wdt/([^/]++)(*:239)'
                     .'|profiler/([^/]++)(?'
                         .'|/(?'
-                            .'|search/results(*:246)'
-                            .'|router(*:260)'
+                            .'|search/results(*:285)'
+                            .'|router(*:299)'
                             .'|exception(?'
-                                .'|(*:280)'
-                                .'|\\.css(*:293)'
+                                .'|(*:319)'
+                                .'|\\.css(*:332)'
                             .')'
                         .')'
-                        .'|(*:303)'
+                        .'|(*:342)'
                     .')'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        31 => [[['_route' => 'admin.voyage.suppr', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::suppr'], ['id'], null, null, false, true, null]],
-        51 => [[['_route' => 'admin.voyage.edit', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], ['id'], null, null, false, true, null]],
-        92 => [[['_route' => 'voyages.sort', '_controller' => 'App\\Controller\\VoyagesController::sort'], ['champ', 'ordre'], null, null, false, true, null]],
-        117 => [[['_route' => 'voyages.findallequal', '_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], ['champ'], null, null, false, true, null]],
-        140 => [[['_route' => 'voyages.showone', '_controller' => 'App\\Controller\\VoyagesController::showOne'], ['id'], null, null, false, true, null]],
-        180 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        200 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        246 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        260 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        280 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        293 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        303 => [
+        48 => [[['_route' => 'admin.environnement.suppr', '_controller' => 'App\\Controller\\Admin\\AdminEnvironnementController::suppr'], ['id'], null, null, false, true, null]],
+        67 => [[['_route' => 'admin.voyage.edit', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], ['id'], null, null, false, true, null]],
+        89 => [[['_route' => 'admin.voyage.suppr', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::suppr'], ['id'], null, null, false, true, null]],
+        130 => [[['_route' => 'voyages.sort', '_controller' => 'App\\Controller\\VoyagesController::sort'], ['champ', 'ordre'], null, null, false, true, null]],
+        156 => [[['_route' => 'voyages.findallequal', '_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], ['champ'], null, null, false, true, null]],
+        179 => [[['_route' => 'voyages.showone', '_controller' => 'App\\Controller\\VoyagesController::showOne'], ['id'], null, null, false, true, null]],
+        219 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        239 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        285 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        299 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        319 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        332 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        342 => [
             [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
