@@ -4,14 +4,14 @@
 
 return [
     'accueil.index' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
+    'admin.voyages' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::index'], [], [['text', '/admin']], [], [], []],
+    'admin.voyage.suppr' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::suppr'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/suppr']], [], [], []],
+    'admin.voyage.edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/edit']], [], [], []],
     'app_basefront' => [[], ['_controller' => 'App\\Controller\\BasefrontController::index'], [], [['text', '/basefront']], [], [], []],
     'voyages' => [[], ['_controller' => 'App\\Controller\\VoyagesController::index'], [], [['text', '/voyages']], [], [], []],
     'voyages.sort' => [['champ', 'ordre'], ['_controller' => 'App\\Controller\\VoyagesController::sort'], [], [['variable', '/', '[^/]++', 'ordre', true], ['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/tri']], [], [], []],
     'voyages.findallequal' => [['champ'], ['_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], [], [['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/recherche']], [], [], []],
     'voyages.showone' => [['id'], ['_controller' => 'App\\Controller\\VoyagesController::showOne'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/voyages/voyage']], [], [], []],
-    'admin.voyages' => [[], ['_controller' => 'App\\Controller\\admin\\AdminVoyagesController::index'], [], [['text', '/admin']], [], [], []],
-    'admin.voyage.suppr' => [['id'], ['_controller' => 'App\\Controller\\admin\\AdminVoyagesController::suppr'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/suppr']], [], [], []],
-    'admin.voyage.edit' => [['id'], ['_controller' => 'App\\Controller\\admin\\AdminVoyagesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/edit']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     '_wdt' => [['token'], ['_controller' => 'web_profiler.controller.profiler::toolbarAction'], [], [['variable', '/', '[^/]++', 'token', true], ['text', '/_wdt']], [], [], []],
     '_profiler_home' => [[], ['_controller' => 'web_profiler.controller.profiler::homeAction'], [], [['text', '/_profiler/']], [], [], []],

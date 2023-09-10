@@ -9,9 +9,9 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/' => [[['_route' => 'accueil.index', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin.voyages', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::index'], null, null, null, false, false, null]],
         '/basefront' => [[['_route' => 'app_basefront', '_controller' => 'App\\Controller\\BasefrontController::index'], null, null, null, false, false, null]],
         '/voyages' => [[['_route' => 'voyages', '_controller' => 'App\\Controller\\VoyagesController::index'], null, null, null, false, false, null]],
-        '/admin' => [[['_route' => 'admin.voyages', '_controller' => 'App\\Controller\\admin\\AdminVoyagesController::index'], null, null, null, false, false, null]],
         '/_profiler' => [[['_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'], null, null, null, true, false, null]],
         '/_profiler/search' => [[['_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'], null, null, null, false, false, null]],
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
@@ -20,14 +20,14 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/voyages/(?'
-                    .'|tri/([^/]++)/([^/]++)(*:40)'
-                    .'|recherche/([^/]++)(*:65)'
-                    .'|voyage/([^/]++)(*:87)'
-                .')'
                 .'|/admin/(?'
-                    .'|suppr/([^/]++)(*:119)'
-                    .'|edit/([^/]++)(*:140)'
+                    .'|suppr/([^/]++)(*:31)'
+                    .'|edit/([^/]++)(*:51)'
+                .')'
+                .'|/voyages/(?'
+                    .'|tri/([^/]++)/([^/]++)(*:92)'
+                    .'|recherche/([^/]++)(*:117)'
+                    .'|voyage/([^/]++)(*:140)'
                 .')'
                 .'|/_(?'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:180)'
@@ -47,11 +47,11 @@ return [
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        40 => [[['_route' => 'voyages.sort', '_controller' => 'App\\Controller\\VoyagesController::sort'], ['champ', 'ordre'], null, null, false, true, null]],
-        65 => [[['_route' => 'voyages.findallequal', '_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], ['champ'], null, null, false, true, null]],
-        87 => [[['_route' => 'voyages.showone', '_controller' => 'App\\Controller\\VoyagesController::showOne'], ['id'], null, null, false, true, null]],
-        119 => [[['_route' => 'admin.voyage.suppr', '_controller' => 'App\\Controller\\admin\\AdminVoyagesController::suppr'], ['id'], null, null, false, true, null]],
-        140 => [[['_route' => 'admin.voyage.edit', '_controller' => 'App\\Controller\\admin\\AdminVoyagesController::edit'], ['id'], null, null, false, true, null]],
+        31 => [[['_route' => 'admin.voyage.suppr', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::suppr'], ['id'], null, null, false, true, null]],
+        51 => [[['_route' => 'admin.voyage.edit', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], ['id'], null, null, false, true, null]],
+        92 => [[['_route' => 'voyages.sort', '_controller' => 'App\\Controller\\VoyagesController::sort'], ['champ', 'ordre'], null, null, false, true, null]],
+        117 => [[['_route' => 'voyages.findallequal', '_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], ['champ'], null, null, false, true, null]],
+        140 => [[['_route' => 'voyages.showone', '_controller' => 'App\\Controller\\VoyagesController::showOne'], ['id'], null, null, false, true, null]],
         180 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         200 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
         246 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],

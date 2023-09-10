@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\admin;
+namespace App\Controller\Admin;
 
 use App\Entity\Visite;
 use App\Form\VisiteType;
@@ -14,18 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminVoyagesController extends AbstractController
 {
-    /**
-     * @Route("/admin", name="admin.voyages")
-     * @return Response
-     */
-    public function index(): Response
-    {
-        $visites = $this->repository->findAllOrderBy('datecreation', 'DESC');
-        return $this->render("admin/admin.voyages.html.twig", [
-            'visites' => $visites
-        ]);
-    }
-
     /**
      * 
      * @var VisiteRepository
@@ -41,6 +29,20 @@ class AdminVoyagesController extends AbstractController
     }
 
     /**
+     * @Route("/admin", name="admin.voyages")
+     * @return Response
+     */
+    public function index(): Response
+    {
+        $visites = $this->repository->findAllOrderBy('datecreation', 'DESC');
+        return $this->render("admin/admin.voyages.html.twig", [
+            'visites' => $visites
+        ]);
+    }
+
+    
+
+    /**
      * @Route("/admin/suppr/{id}", name="admin.voyage.suppr")
      * @param Visite $id
      * @return Response
@@ -51,20 +53,27 @@ class AdminVoyagesController extends AbstractController
         return $this->redirectToRoute('admin.voyages');
     }
 
-     /**
+
+    /**
      * @Route("/admin/edit/{id}", name="admin.voyage.edit")
      * @param int $id
+     * @param Request $request
      * @return Response
      */
-    public function edit(int $id): Response {
+    public function edit(int $id, Request $request): Response {
         // Récupérez l'entité Visite correspondant à l'ID
-        $visite = $this->getDoctrine()->getRepository(Visite::class)->find($id);
-
+        $visite = $this->repository->find($id);
         $formVisite = $this->createForm(VisiteType::class, $visite);
-        
+
+        $formVisite->handleRequest($request);
+        if($formVisite->isSubmitted() && $formVisite->isValid()) {
+            $this->repository->add($visite, true);
+            return $this->redirectToRoute('admin.voyages');
+        }
         return $this->render("admin/admin.voyage.edit.html.twig", [
             'visite' => $visite,
             'formvisite' => $formVisite->createView()
         ]);
     }
+
 }

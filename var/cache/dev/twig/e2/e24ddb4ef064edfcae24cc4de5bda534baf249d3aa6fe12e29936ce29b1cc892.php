@@ -65,9 +65,64 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h2>";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 4, $this->source); })()), "ville", [], "any", false, false, false, 4), "html", null, true);
-        echo "</h2>
+        echo "    <h2>Détail visite : </h2>
+    ";
+        // line 5
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 5, $this->source); })()), 'form_start');
+        echo "
+        <div class=\"row\">
+            <div class=\"col\">             
+                <div class=\"row\">
+                    <div class=\"col-auto\">
+                        ";
+        // line 10
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 10, $this->source); })()), "datecreation", [], "any", false, false, false, 10), 'row');
+        echo "                                                  
+                    </div>
+                    <div class=\"col\">
+                        ";
+        // line 13
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 13, $this->source); })()), "note", [], "any", false, false, false, 13), 'row');
+        echo "
+                    </div>
+                    <div class=\"col\">
+                        ";
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 16, $this->source); })()), "tempmin", [], "any", false, false, false, 16), 'row');
+        echo "
+                    </div>
+                    <div class=\"col\">
+                        ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 19, $this->source); })()), "tempmax", [], "any", false, false, false, 19), 'row');
+        echo "
+                    </div>
+                </div>
+                ";
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 22, $this->source); })()), "ville", [], "any", false, false, false, 22), 'row');
+        echo "
+                ";
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 23, $this->source); })()), "pays", [], "any", false, false, false, 23), 'row');
+        echo "
+            </div>
+            <div class=\"col\">
+                <!-- emplacement image -->
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col\">
+                ";
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 31, $this->source); })()), "avis", [], "any", false, false, false, 31), 'row');
+        echo "
+            </div>
+        </div>
+    ";
+        // line 34
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formvisite"]) || array_key_exists("formvisite", $context) ? $context["formvisite"] : (function () { throw new RuntimeError('Variable "formvisite" does not exist.', 34, $this->source); })()), 'form_end');
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -89,7 +144,7 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
 
     public function getDebugInfo()
     {
-        return array (  68 => 4,  58 => 3,  35 => 1,);
+        return array (  124 => 34,  118 => 31,  107 => 23,  103 => 22,  97 => 19,  91 => 16,  85 => 13,  79 => 10,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -97,7 +152,37 @@ class __TwigTemplate_534acc55b3b1bcf3971a49f4c689ae284aa3186dfd684a1cc3cd01f5599
         return new Source("{% extends \"baseadmin.html.twig\" %}
 
 {% block body %}
-    <h2>{{ visite.ville}}</h2>
+    <h2>Détail visite : </h2>
+    {{ form_start(formvisite) }}
+        <div class=\"row\">
+            <div class=\"col\">             
+                <div class=\"row\">
+                    <div class=\"col-auto\">
+                        {{ form_row(formvisite.datecreation) }}                                                  
+                    </div>
+                    <div class=\"col\">
+                        {{ form_row(formvisite.note) }}
+                    </div>
+                    <div class=\"col\">
+                        {{ form_row(formvisite.tempmin) }}
+                    </div>
+                    <div class=\"col\">
+                        {{ form_row(formvisite.tempmax) }}
+                    </div>
+                </div>
+                {{ form_row(formvisite.ville) }}
+                {{ form_row(formvisite.pays) }}
+            </div>
+            <div class=\"col\">
+                <!-- emplacement image -->
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col\">
+                {{ form_row(formvisite.avis) }}
+            </div>
+        </div>
+    {{ form_end(formvisite) }}
 {% endblock %}", "admin/admin.voyage.edit.html.twig", "C:\\wamp64\\www\\mesvoyages\\templates\\admin\\admin.voyage.edit.html.twig");
     }
 }
