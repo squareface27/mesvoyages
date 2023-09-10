@@ -51,3 +51,8 @@ f45eae,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694360121,,20
 8c3e74,::1,GET,http://localhost/mesvoyages/public/index.php/admin/edit/102,1694360124,,200
 01918c,::1,POST,http://localhost/mesvoyages/public/index.php/admin/edit/102,1694360134,,302
 685a2b,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694360134,,200
+b469c2,::1,GET,http://localhost/mesvoyages/public/index.php/admin,1694360347,,200
+7ca625,::1,GET,http://localhost/mesvoyages/public/index.php/,1694360350,,200
+a84bdf,::1,GET,http://localhost/mesvoyages/public/index.php/voyages,1694360351,,200
+b7aa74,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/voyage/31,1694360353,,200
+96248e,::1,GET,http://localhost/mesvoyages/public/index.php/voyages/voyage/102,1694360363,,200
