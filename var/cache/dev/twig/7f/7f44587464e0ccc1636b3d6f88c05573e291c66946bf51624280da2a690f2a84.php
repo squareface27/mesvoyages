@@ -113,14 +113,20 @@ class __TwigTemplate_6371b2fa30a7a751b69d1c1cc0199fdd811871c89eebc2446f6a8e926bd
             <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
               <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
                 <li class=\"nav-item\">
-                  <a class=\"nav-link\" href=\"";
+                  <a class=\"nav-link active\" aria-current=\"page\" href=\"";
         // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil.index");
+        echo "\">Accueil</a>
+                </li>
+                <li class=\"nav-item\">
+                  <a class=\"nav-link\" href=\"";
+        // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyages");
         echo "\">Voyages</a>
                 </li>
                 <li class=\"nav-item\">
                   <a class=\"nav-link\" href=\"";
-        // line 18
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.environnements");
         echo "\">Environnements</a>
                 </li>                
@@ -137,7 +143,7 @@ class __TwigTemplate_6371b2fa30a7a751b69d1c1cc0199fdd811871c89eebc2446f6a8e926bd
 
     }
 
-    // line 26
+    // line 29
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -155,7 +161,7 @@ class __TwigTemplate_6371b2fa30a7a751b69d1c1cc0199fdd811871c89eebc2446f6a8e926bd
 
     }
 
-    // line 27
+    // line 30
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -185,7 +191,7 @@ class __TwigTemplate_6371b2fa30a7a751b69d1c1cc0199fdd811871c89eebc2446f6a8e926bd
 
     public function getDebugInfo()
     {
-        return array (  159 => 27,  141 => 26,  124 => 18,  118 => 15,  108 => 7,  98 => 6,  80 => 4,  62 => 3,  39 => 1,);
+        return array (  165 => 30,  147 => 29,  130 => 21,  124 => 18,  118 => 15,  108 => 7,  98 => 6,  80 => 4,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +209,9 @@ class __TwigTemplate_6371b2fa30a7a751b69d1c1cc0199fdd811871c89eebc2446f6a8e926bd
         <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
             <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
               <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
+                <li class=\"nav-item\">
+                  <a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('accueil.index') }}\">Accueil</a>
+                </li>
                 <li class=\"nav-item\">
                   <a class=\"nav-link\" href=\"{{ path('admin.voyages') }}\">Voyages</a>
                 </li>

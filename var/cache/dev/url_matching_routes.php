@@ -14,6 +14,7 @@ return [
         '/admin' => [[['_route' => 'admin.voyages', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::index'], null, null, null, false, false, null]],
         '/admin/ajout' => [[['_route' => 'admin.voyage.ajout', '_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::ajout'], null, null, null, false, false, null]],
         '/basefront' => [[['_route' => 'app_basefront', '_controller' => 'App\\Controller\\BasefrontController::index'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/voyages' => [[['_route' => 'voyages', '_controller' => 'App\\Controller\\VoyagesController::index'], null, null, null, false, false, null]],
         '/_profiler' => [[['_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'], null, null, null, true, false, null]],
         '/_profiler/search' => [[['_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'], null, null, null, false, false, null]],

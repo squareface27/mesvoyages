@@ -12,6 +12,7 @@ return [
     'admin.voyage.edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/edit']], [], [], []],
     'admin.voyage.ajout' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::ajout'], [], [['text', '/admin/ajout']], [], [], []],
     'app_basefront' => [[], ['_controller' => 'App\\Controller\\BasefrontController::index'], [], [['text', '/basefront']], [], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
     'voyages' => [[], ['_controller' => 'App\\Controller\\VoyagesController::index'], [], [['text', '/voyages']], [], [], []],
     'voyages.sort' => [['champ', 'ordre'], ['_controller' => 'App\\Controller\\VoyagesController::sort'], [], [['variable', '/', '[^/]++', 'ordre', true], ['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/tri']], [], [], []],
     'voyages.findallequal' => [['champ'], ['_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], [], [['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/recherche']], [], [], []],
