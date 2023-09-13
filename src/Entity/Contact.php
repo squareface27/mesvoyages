@@ -26,7 +26,7 @@ class Contact
     /**
      * @var string|null
      * @Assert\NotBlank()
-     * @Assert\length(min=2, max=100)
+     * @Assert\Length(min=2, max=100)
      */
     private $nom;
 

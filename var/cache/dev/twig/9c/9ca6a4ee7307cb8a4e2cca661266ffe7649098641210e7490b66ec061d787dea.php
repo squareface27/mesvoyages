@@ -133,6 +133,18 @@ class __TwigTemplate_8bead0458427a31f889f1b82a9d52438de88275c4b85f55c1b0068f13f8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("voyages");
         echo "\">Voyages</a>
         </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+        // line 27
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">Contact</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin.voyages");
+        echo "\">Admin</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -148,7 +160,7 @@ class __TwigTemplate_8bead0458427a31f889f1b82a9d52438de88275c4b85f55c1b0068f13f8
 
     }
 
-    // line 33
+    // line 39
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -167,7 +179,7 @@ class __TwigTemplate_8bead0458427a31f889f1b82a9d52438de88275c4b85f55c1b0068f13f8
 
     }
 
-    // line 34
+    // line 40
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +210,7 @@ class __TwigTemplate_8bead0458427a31f889f1b82a9d52438de88275c4b85f55c1b0068f13f8
 
     public function getDebugInfo()
     {
-        return array (  171 => 34,  152 => 33,  133 => 24,  127 => 21,  100 => 5,  81 => 4,  62 => 3,  39 => 1,);
+        return array (  183 => 40,  164 => 39,  145 => 30,  139 => 27,  133 => 24,  127 => 21,  100 => 5,  81 => 4,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -227,6 +239,12 @@ class __TwigTemplate_8bead0458427a31f889f1b82a9d52438de88275c4b85f55c1b0068f13f8
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"{{ path('voyages') }}\">Voyages</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('contact') }}\">Contact</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('admin.voyages') }}\">Admin</a>
         </li>
       </ul>
     </div>

@@ -118,16 +118,33 @@ class __TwigTemplate_a6531f091441deeaffd99c6413fed4db33368744b75d04a97f0d7db19be
         // line 19
         echo "        </div>
         <div class=\"col\">
-        <!-- Emplacement photo -->
-        </div>
+        <!-- emplacement photo -->   
+            <div>
+                ";
+        // line 23
+        if (twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 23, $this->source); })()), "imagename", [], "any", false, false, false, 23)) {
+            // line 24
+            echo "                    <img src=\"";
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "request", [], "any", false, false, false, 24), "getBasePath", [], "method", false, false, false, 24) . $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset((isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 24, $this->source); })()), "imageFile")), "html", null, true);
+            echo "\"
+                         class=\"card-img-top\" style=\"width:100%;height:auto;\">
+                ";
+        } else {
+            // line 27
+            echo "                    <p>(aucune image)</p>
+                ";
+        }
+        // line 28
+        echo "            
+            </div  
     </div>
     <div class=\"row mt-5\">
         <div class=\"col md-12\">
             <p><strong>mon avis : </strong></p>
             <p>
             ";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 28, $this->source); })()), "avis", [], "any", false, false, false, 28), "html", null, true);
+        // line 35
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["visite"]) || array_key_exists("visite", $context) ? $context["visite"] : (function () { throw new RuntimeError('Variable "visite" does not exist.', 35, $this->source); })()), "avis", [], "any", false, false, false, 35), "html", null, true);
         echo "
             </p>
         </div>
@@ -153,7 +170,7 @@ class __TwigTemplate_a6531f091441deeaffd99c6413fed4db33368744b75d04a97f0d7db19be
 
     public function getDebugInfo()
     {
-        return array (  130 => 28,  119 => 19,  110 => 17,  106 => 16,  98 => 14,  92 => 12,  86 => 10,  84 => 9,  80 => 8,  76 => 7,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  147 => 35,  138 => 28,  134 => 27,  127 => 24,  125 => 23,  119 => 19,  110 => 17,  106 => 16,  98 => 14,  92 => 12,  86 => 10,  84 => 9,  80 => 8,  76 => 7,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -178,8 +195,15 @@ class __TwigTemplate_a6531f091441deeaffd99c6413fed4db33368744b75d04a97f0d7db19be
             {% endfor %}
         </div>
         <div class=\"col\">
-        <!-- Emplacement photo -->
-        </div>
+        <!-- emplacement photo -->   
+            <div>
+                {% if visite.imagename %}
+                    <img src=\"{{ app.request.getBasePath()~vich_uploader_asset(visite, 'imageFile') }}\"
+                         class=\"card-img-top\" style=\"width:100%;height:auto;\">
+                {% else %}
+                    <p>(aucune image)</p>
+                {% endif %}            
+            </div  
     </div>
     <div class=\"row mt-5\">
         <div class=\"col md-12\">

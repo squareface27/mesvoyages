@@ -13,6 +13,8 @@ return [
     'admin.voyage.ajout' => [[], ['_controller' => 'App\\Controller\\Admin\\AdminVoyagesController::ajout'], [], [['text', '/admin/ajout']], [], [], []],
     'app_basefront' => [[], ['_controller' => 'App\\Controller\\BasefrontController::index'], [], [['text', '/basefront']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
+    'logout' => [[], ['_controller' => 'App\\Controller\\LoginController::logout'], [], [['text', '/logout']], [], [], []],
     'voyages' => [[], ['_controller' => 'App\\Controller\\VoyagesController::index'], [], [['text', '/voyages']], [], [], []],
     'voyages.sort' => [['champ', 'ordre'], ['_controller' => 'App\\Controller\\VoyagesController::sort'], [], [['variable', '/', '[^/]++', 'ordre', true], ['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/tri']], [], [], []],
     'voyages.findallequal' => [['champ'], ['_controller' => 'App\\Controller\\VoyagesController::findAllEqual'], [], [['variable', '/', '[^/]++', 'champ', true], ['text', '/voyages/recherche']], [], [], []],
