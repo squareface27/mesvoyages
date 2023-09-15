@@ -66,16 +66,28 @@ class __TwigTemplate_dc3d03a2237bec6037515742b2555067840263fb2de74dc4784af21dfe8
 
 
     <body>
-        ";
-        // line 14
-        $this->displayBlock('top', $context, $blocks);
+        <div class=\"container text-end\">
+            ";
         // line 15
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15)) {
+            // line 16
+            echo "                <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+            echo "\">se déconnecter</a>
+            ";
+        }
+        // line 18
+        echo "        </div>
+            ";
+        // line 19
+        $this->displayBlock('top', $context, $blocks);
+        // line 20
         echo "        
         <div class=\"container\">
             ";
-        // line 17
+        // line 22
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 23
         echo "        </div>
 
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
@@ -147,7 +159,7 @@ class __TwigTemplate_dc3d03a2237bec6037515742b2555067840263fb2de74dc4784af21dfe8
 
     }
 
-    // line 14
+    // line 19
     public function block_top($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,7 +178,7 @@ class __TwigTemplate_dc3d03a2237bec6037515742b2555067840263fb2de74dc4784af21dfe8
 
     }
 
-    // line 17
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -189,9 +201,14 @@ class __TwigTemplate_dc3d03a2237bec6037515742b2555067840263fb2de74dc4784af21dfe8
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  170 => 17,  151 => 14,  132 => 9,  113 => 8,  94 => 6,  79 => 18,  77 => 17,  73 => 15,  71 => 14,  65 => 10,  62 => 9,  60 => 8,  55 => 6,  48 => 1,);
+        return array (  182 => 22,  163 => 19,  144 => 9,  125 => 8,  106 => 6,  91 => 23,  89 => 22,  85 => 20,  83 => 19,  80 => 18,  74 => 16,  72 => 15,  65 => 10,  62 => 9,  60 => 8,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -209,7 +226,12 @@ class __TwigTemplate_dc3d03a2237bec6037515742b2555067840263fb2de74dc4784af21dfe8
 
 
     <body>
-        {% block top %} {% endblock %}
+        <div class=\"container text-end\">
+            {% if app.user %}
+                <a href=\"{{ path('logout') }}\">se déconnecter</a>
+            {% endif %}
+        </div>
+            {% block top %} {% endblock %}
         
         <div class=\"container\">
             {% block body %}{% endblock %}
